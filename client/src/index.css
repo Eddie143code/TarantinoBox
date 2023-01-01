@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bars {
+  display: none;
+}
+.bars-on {
+  display: block;
+  height: 2%;
+  margin-top: 5%;
+  width: 47.5%;
+  display: fixed;
+  background-color: white;
+}
+
+/* sm */
+@media (min-width: 640px) {
+  .bars-on {
+    display: block;
+    height: 4%;
+    width: 48%;
+    display: fixed;
+    background-color: white;
+  }
+}
+
+/*  md */
+@media (min-width: 768px) {
+  .bars-on {
+    display: block;
+    height: 4%;
+    width: 49%;
+    display: fixed;
+    background-color: white;
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  .bars-on {
+    display: none;
+  }
+  .nav-links {
+    display: flex;
+    height: 4%;
+    width: 100%;
+    margin-top: 0.4%;
+  }
+}
+
+* {
+  font-family: sans-serif;
+}

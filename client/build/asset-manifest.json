@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5322d79a.css",
+    "main.js": "/static/js/main.31636d40.js",
+    "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
+    "static/media/cumberpatch1.png": "/static/media/cumberpatch1.babb61ad15f7fa477d93.png",
+    "static/media/sonic.png": "/static/media/sonic.e93629c2a2623e9f0c3f.png",
+    "static/media/elvis_1.png": "/static/media/elvis_1.cc0bc68e16265dcae4ef.png",
+    "static/media/thor_2.png": "/static/media/thor_2.e724be2a17ac4fad20eb.png",
+    "static/media/social_media.png": "/static/media/social_media.c43d3261e8ac9f57a2a1.png",
+    "static/media/batman_1.png": "/static/media/batman_1.70aa4a13ef33d7e01d18.png",
+    "static/media/northman_1.png": "/static/media/northman_1.d2e3bed02dbf947a89be.png",
+    "static/media/MovieBox.png": "/static/media/MovieBox.d03f1cc5d22f74b695f9.png",
+    "static/media/orange_circle.png": "/static/media/orange_circle.a3ec8eddbbc41160afa7.png",
+    "static/media/welcome.png": "/static/media/welcome.4409d9fcda7a10c01f26.png",
+    "index.html": "/index.html",
+    "main.5322d79a.css.map": "/static/css/main.5322d79a.css.map",
+    "main.31636d40.js.map": "/static/js/main.31636d40.js.map",
+    "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5322d79a.css",
+    "static/js/main.31636d40.js"
+  ]
+}
