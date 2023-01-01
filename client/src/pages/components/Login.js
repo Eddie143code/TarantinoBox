@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { login } from "../../features/auth/authSlice";
 import { useSelector, useDispatch } from "react-redux";
-import { set } from "mongoose";
 
 const Login = () => {
   const [userLogin, setUser] = useState({
