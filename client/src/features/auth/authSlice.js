@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const API_URL = "/api/users/";
+const API_URL = "https://moviebox-backend.onrender.com/api/users/";
 
 const user = JSON.parse(localStorage.getItem("user"));
 
