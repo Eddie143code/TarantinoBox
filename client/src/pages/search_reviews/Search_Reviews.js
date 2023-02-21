@@ -15,17 +15,20 @@ import Login from "../components/Login";
 import Signup from "../components/Signup";
 import Pagination from "../Pagination";
 
+import { SpinningCircles } from "react-loading-icons";
+
 const Search_Reviews = () => {
   const [search, setSearch] = useState("");
   const [results, setResults] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPerPage] = useState(5);
+  const [loading, setLoading] = useState(false);
 
-  const { user, isError, isSuccess, isLoading, message } = useSelector(
+  const { user, isError, isSuccess, message } = useSelector(
     (state) => state.auth
   );
   const { loginOpen, signupOpen } = useSelector((state) => state.modal);
-  const { reviews } = useSelector((state) => state.review);
+  const { reviews, isLoading } = useSelector((state) => state.review);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -57,19 +60,28 @@ const Search_Reviews = () => {
       dispatch(successModal());
     }
     if (search) {
-      const array = [];
-      const searchVar = search.toLowerCase();
-      for (let i = 0; i < reviews.reviews.length; i++) {
-        const tag = reviews.reviews[i].tag.toLowerCase();
-        if (searchVar === tag) {
-          array.push(reviews.reviews[i]);
+      if (reviews.reviews) {
+        const array = [];
+        const searchVar = search.toLowerCase();
+        for (let i = 0; i < reviews.reviews.length; i++) {
+          const tag = reviews.reviews[i].tag.toLowerCase();
+          if (searchVar === tag) {
+            array.push(reviews.reviews[i]);
+          }
         }
+        setResults(array);
+        setSearch("");
       }
-      setResults(array);
-      setSearch("");
     }
     console.log(reviews);
-  }, [isSuccess, loginOpen, signupOpen, dispatch, reviews]);
+    console.log(isLoading);
+    if (isLoading) {
+      setLoading(true);
+    }
+    if (!isLoading) {
+      setLoading(false);
+    }
+  }, [isSuccess, loginOpen, signupOpen, dispatch, isLoading]);
 
   return (
     <div className="flex-col justify-center h-[200%] w-[100%] ">
@@ -95,6 +107,11 @@ const Search_Reviews = () => {
                 />
               </form>
             </article>
+            {loading && (
+              <article className="flex justify-center">
+                <SpinningCircles stroke="#7EC8E3" fill="#7EC8E3" />
+              </article>
+            )}
             {results &&
               currentPosts.map((review, i) => {
                 return (
